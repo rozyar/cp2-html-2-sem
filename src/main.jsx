@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import EditarProdutos from './routes/EditarProdutos/EditarProdutos.jsx';
 import Home from './routes/Home/Home.jsx';
 import Produtos from './routes/Produtos/Produtos.jsx';
@@ -14,7 +14,8 @@ const router = createBrowserRouter([
     children: [
       { path: '/' , element: <Home/>},
       { path: '/produtos' , element: <Produtos/>},
-      { path: '/editar/produtos/:id' , element: <EditarProdutos/>}
+      { path: '/editar/produtos/:id' , element: <EditarProdutos/>},
+      { path: '/antiga' , element: <Navigate to='/'/> }
     ]
   }
 ]);
