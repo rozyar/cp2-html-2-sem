@@ -8,8 +8,20 @@ import Home from './routes/Home/Home.jsx';
 import Produtos from './routes/Produtos/Produtos.jsx';
 import Error from './routes/Error/Error.jsx';
 
+const router = createBrowserRouter([
+  { path: '/' , element: <App/>,
+    errorElement: <Error/>,
+    children: [
+      { path: '/' , element: <Home/>},
+      { path: '/produtos' , element: <Produtos/>},
+      { path: '/editar/produtos/:id' , element: <EditarProdutos/>},
+      { path: '/excluir/produtos/:id' , element: <ExcluirProdutos/>},
+    ]
+  }
+]);
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>,
 )
