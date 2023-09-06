@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import ListaProdutos from '../../components/ListaProdutos';
 
 const EditarProdutos = () => {
+   
     const lista = ListaProdutos;
     const navegacao = useNavigate();
     const {id} = useParams();
@@ -13,8 +14,8 @@ const EditarProdutos = () => {
     return (
         <main>
             <h1>Editar Produtos</h1>
-            <p>Editando os dados do produto: produto {produto.name}</p>
-            <button onClick={salvar}>Salvar</button>
+            <p>Editando os dados do produto: produto {produto.nome}</p>
+            <button>Salvar</button>
         </main>
     );
 }
