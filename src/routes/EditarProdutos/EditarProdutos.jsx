@@ -2,9 +2,9 @@ import React from 'react';
 
 const EditarProdutos = () => {
     return (
-        <div>
+        <main>
             <h1>Editar Produtos</h1>
-        </div>
+        </main>
     );
 }
 
